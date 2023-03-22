@@ -68,9 +68,6 @@ public class Quiz {
         for(int i=0; i< str.length(); i++){
             if (str.charAt(i) == '_'
                     || str.charAt(i) == '-') result += str[i].toUpperCase;
-            else {
-                result += str;
-            }
         }
         return result;
 
