@@ -2,18 +2,33 @@ public class Quiz {
 
 
 
-    /** 1. Write a method that returns the number of vowels in a string.
-           Consider a, e, i, o, u as vowels. **/
-
-
-
-
-
+    /**
+     * 1. Write a method that returns the number of vowels in a string.
+     * Consider a, e, i, o, u as vowels.
+     *
+     * @return
+     **/
+    public static int findVowels(String[] args) {
+        String str = "";
+        str = str.toLowerCase();
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a'
+                    || str.charAt(i) == 'e'
+                    || str.charAt(i) == 'i'
+                    || str.charAt(i) == 'o'
+                    || str.charAt(i) == 'u') {
+            }
+            count++;
+        }
+        return count;
+    }
 
     /** 2. Write a method called findN that finds the number of natural numbers not exceeding N
         and not divisible by any of the numbers [2, 3, 5].
 
         Example
+
 
         Let's take the number 5 as an example:
 
@@ -25,7 +40,16 @@ public class Quiz {
 
         Answer: 1 (only one number doesn't divide integer by any of 2, 3, 5) **/
 
-
+    public static int findN(String[] args){
+    int count = 0;
+        int N = 7;
+        for(int i=1; i<=N; i++) {
+            if (i%2!=0 ||i%3!=0 ||i%5!=0) {
+                count ++;
+            }
+        }
+        return count;
+    }
 
 
     /** 3. Write a method called camelCaseMe so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should always be capitalized.
@@ -38,5 +62,18 @@ public class Quiz {
 
            "The_Stealth-Warrior" gets converted to "TheStealthWarrior" **/
 
+    public static String camelCaseMe(String[] args) {
+        String result = "";
+        String str = "";
+        for(int i=0; i< str.length(); i++){
+            if (str.charAt(i) == '_'
+                    || str.charAt(i) == '-') result += str[i].toUpperCase;
+            else {
+                result += str;
+            }
+        }
+        return result;
+
+    }
 
 }
